@@ -7,7 +7,11 @@ import RPC from "./web3RPC";
 import Nav from "./components/Nav";
 import Container from "./components/Container";
 
-const clientId = "YOUR_WEB3AUTH_CLIENT_ID"; // get from https://dashboard.web3auth.io
+require("dotenv").config();
+
+const clientId = process.env.WEB3AUTH_ClIENT_ID
+  ? process.env.WEB3AUTH_ClIENT_ID
+  : "";
 
 function App() {
   const [web3auth, setWeb3auth] = useState<Web3Auth | null>(null);
