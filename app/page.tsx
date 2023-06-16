@@ -9,8 +9,8 @@ import Container from "./components/Container";
 
 require("dotenv").config();
 
-const clientId = process.env.WEB3AUTH_ClIENT_ID
-  ? process.env.WEB3AUTH_ClIENT_ID
+const clientId = process.env.NEXT_PUBLIC_WEB3AUTH_ClIENT_ID
+  ? process.env.NEXT_PUBLIC_WEB3AUTH_ClIENT_ID
   : "";
 
 function App() {
@@ -22,13 +22,15 @@ function App() {
   useEffect(() => {
     const init = async () => {
       try {
+        console.log("CLIENT_ID: ", clientId);
         const web3auth = new Web3Auth({
           clientId,
           web3AuthNetwork: "testnet", // mainnet, aqua, celeste, cyan or testnet
           chainConfig: {
             chainNamespace: CHAIN_NAMESPACES.EIP155,
-            chainId: "0x1",
-            rpcTarget: "https://rpc.ankr.com/eth", // This is the public RPC we have added, please pass on your own endpoint while creating an app
+            chainId: "0x13881",
+            rpcTarget:
+              " https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78", // This is the public RPC we have added, please pass on your own endpoint while creating an app
           },
         });
 
