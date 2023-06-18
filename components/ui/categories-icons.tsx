@@ -7,7 +7,7 @@ import Passport from "../svg/passport";
 import Residence from "../svg/residence";
 import Transactions from "../svg/transactions";
 import Banking from "../svg/bank";
-import Card from "./Card";
+import Card from "./card";
 import Link from "next/link";
 import Wallet from "../svg/wallet";
 

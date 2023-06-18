@@ -2,7 +2,7 @@
 
 import QrScanner from "@/components/ui/QrScanner";
 import Container from "@/components/ui/Container";
-import MediaDevices from "@/components/ui/MediaDevices";
+import MediaDevices from "@/components/ui/media-devices";
 import Result from "@zxing/library/esm/core/Result";
 
 import { SetStateAction, useState } from "react";
