@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
+import CategoriesIcons from "./categories-icons";
 
 interface ILogin {
   onClick: () => Promise<void>;
@@ -11,7 +12,7 @@ interface ILogin {
 function Nav({ onClick, loggedIn }: ILogin) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
+    <div className="w-full">
       <nav className="bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -165,21 +166,6 @@ function Nav({ onClick, loggedIn }: ILogin) {
           )}
         </Transition>
       </nav>
-
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-        </div>
-      </header>
-      <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          {/* <!-- Replace with your content --> */}
-          <div className="px-4 py-6 sm:px-0">
-            <div className="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
-          </div>
-          {/* <!-- /End replace --> */}
-        </div>
-      </main>
     </div>
   );
 }

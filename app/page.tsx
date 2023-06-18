@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { Web3Auth } from "@web3auth/modal";
 import { CHAIN_NAMESPACES, SafeEventEmitterProvider } from "@web3auth/base";
 import RPC from "./web3RPC";
-import Nav from "./components/Nav";
-import Container from "./components/Container";
+import Nav from "../components/ui/Nav";
+import Container from "../components/ui/Container";
+import CategoriesIcons from "../components/ui/categories-icons";
 
 require("dotenv").config();
 
@@ -153,49 +154,49 @@ function App() {
 
   const loggedInView = (
     <>
-      <div className="flex-container">
+      <div className="">
         <div>
-          <button onClick={getUserInfo} className="card">
+          <button onClick={getUserInfo} className="text-gray-700">
             Get User Info
           </button>
         </div>
         <div>
-          <button onClick={authenticateUser} className="card">
+          <button onClick={authenticateUser} className="text-gray-700">
             Get ID Token
           </button>
         </div>
         <div>
-          <button onClick={getChainId} className="card">
+          <button onClick={getChainId} className="text-gray-700">
             Get Chain ID
           </button>
         </div>
         <div>
-          <button onClick={getAccounts} className="card">
+          <button onClick={getAccounts} className="text-gray-700">
             Get Accounts
           </button>
         </div>
         <div>
-          <button onClick={getBalance} className="card">
+          <button onClick={getBalance} className="text-gray-700">
             Get Balance
           </button>
         </div>
         <div>
-          <button onClick={signMessage} className="card">
+          <button onClick={signMessage} className="text-gray-700">
             Sign Message
           </button>
         </div>
         <div>
-          <button onClick={sendTransaction} className="card">
+          <button onClick={sendTransaction} className="text-gray-700">
             Send Transaction
           </button>
         </div>
         <div>
-          <button onClick={getPrivateKey} className="card">
+          <button onClick={getPrivateKey} className="text-gray-700">
             Get Private Key
           </button>
         </div>
         <div>
-          <button onClick={logout} className="card">
+          <button onClick={logout} className="text-gray-700">
             Log Out
           </button>
         </div>
@@ -208,17 +209,16 @@ function App() {
   );
 
   // const unloggedInView = (
-  //   <button onClick={login} className="card">
+  //   <button onClick={login} className="text-gray-700">
   //     Login
   //   </button>
   // );
 
   return (
-    <div className="">
+    <div className="w-full bg-slate-50">
       <Nav onClick={login} />
-      <Container>
-        <div className="grid">{provider ? loggedInView : "LOgin PleAsE"}</div>
-      </Container>
+      <CategoriesIcons />
+      <div className="grid">{provider ? loggedInView : ""}</div>
     </div>
   );
 }
