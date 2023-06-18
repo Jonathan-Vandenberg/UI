@@ -1,7 +1,7 @@
 "use client";
 
 import QrScanner from "@/components/ui/QrScanner";
-import Container from "@/components/ui/Container";
+import Container from "@/components/ui/container";
 import MediaDevices from "@/components/ui/media-devices";
 import Result from "@zxing/library/esm/core/Result";
 
