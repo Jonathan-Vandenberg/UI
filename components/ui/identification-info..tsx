@@ -1,12 +1,12 @@
 import React from "react";
-import Container from "./container";
+// import Container from "./container";
 import { Skeleton } from "./skeleton";
 import image from "public/latina.png";
 import Image from "next/image";
 
 export default function IdentificationInfo({ information }: any) {
   return (
-    <Container>
+    <div>
       <div className="flex flex-col items-center justify-center space-y-10">
         {information.name && (
           <div className="relative flex items-center justify-center h-36 w-36 shrink-0 rounded-full mx-auto mt-4 overflow-visible pt-6">
@@ -126,6 +126,6 @@ export default function IdentificationInfo({ information }: any) {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
