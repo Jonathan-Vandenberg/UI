@@ -5,7 +5,6 @@ import { Web3Auth } from "@web3auth/modal";
 import { CHAIN_NAMESPACES, SafeEventEmitterProvider } from "@web3auth/base";
 import RPC from "./web3RPC";
 import Nav from "../components/ui/nav";
-import Container from "../components/ui/container";
 import CategoriesIcons from "../components/ui/categories-icons";
 
 require("dotenv").config();
